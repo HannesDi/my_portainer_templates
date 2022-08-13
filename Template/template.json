@@ -4507,7 +4507,7 @@
       "volumes": [
         {
           "bind": "/portainer/Files/AppData/Config/Flame",
-          "container": "/config"
+          "container": "/app/data"
         }
       ]
     }
