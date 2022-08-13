@@ -4480,6 +4480,36 @@
           "container": "/config"
         }
       ]
+    },
+    {
+      "categories": ["Other", "Tools"],
+      "description": "Flame is self-hosted startpage for your server. Easily manage your apps and bookmarks with built-in editors.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        }
+      ],
+      "image": "pawelmalak/flame",
+      "logo": "https://raw.githubusercontent.com/HannesDi/my_portainer_templates/main/Images/own/flame-icon.png",
+      "name": "flame",
+      "platform": "linux",
+      "ports": ["80/tcp"],
+      "restart_policy": "unless-stopped",
+      "title": "Flame Dashboard",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/Flame",
+          "container": "/config"
+        }
+      ]
     }
   ]
 }
