@@ -4525,6 +4525,71 @@
     },
     {
       "categories": ["Other", "Tools"],
+      "description": "Yet another remote desktop software, written in Rust. Works out of the box, no configuration required. You have full control of your data, with no concerns about security.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        }
+      ],
+      "image": "rustdesk/rustdesk-server",
+      "logo": "https://raw.githubusercontent.com/HannesDi/my_portainer_templates/main/Images/own/rustserver.png",
+      "name": "rustdesk-server",
+      "platform": "linux",
+      "ports": ["21115:21115/tcp"],
+      "ports": ["21116:21116/tcp"],
+      "ports": ["21116:21116/udp"],
+      "ports": ["21118:21118/tcp"],
+      "restart_policy": "unless-stopped",
+      "title": "RustDeskServer",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/Rustdesk-hbbs",
+          "container": "/root"
+        }
+      ]
+    },
+    {
+      "categories": ["Other", "Tools"],
+      "description": "Yet another remote desktop software, written in Rust. Works out of the box, no configuration required. You have full control of your data, with no concerns about security.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        }
+      ],
+      "image": "rustdesk/rustdesk-server",
+      "logo": "https://raw.githubusercontent.com/HannesDi/my_portainer_templates/main/Images/own/rustserver.png",
+      "name": "rustdesk-server-relay",
+      "platform": "linux",
+      "ports": ["21117:21117/tcp"],
+      "ports": ["21119:21119/tcp"],
+      "restart_policy": "unless-stopped",
+      "title": "RustDeskServer-Relay",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/Rustdesk-hbbr",
+          "container": "/root"
+        }
+      ],
+      "command": ""
+    },
+    {
+      "categories": ["Other", "Tools"],
       "description": "Flame is self-hosted startpage for your server. Easily manage your apps and bookmarks with built-in editors.",
       "env": [
         {
