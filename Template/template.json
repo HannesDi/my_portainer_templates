@@ -4482,6 +4482,48 @@
       ]
     },
     {
+      "categories": ["Database", "Tools"],
+      "description": "Adminer (formerly phpMinAdmin) is a full-featured database management tool written in PHP. Conversely to phpMyAdmin, it consist of a single file ready to deploy to the target server. Adminer is available for MySQL, PostgreSQL, SQLite, MS SQL, Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "dracula",
+          "description": "Theme",
+          "label": "ADMINER_DESIGN",
+          "name": "ADMINER_DESIGN"
+        },
+        {
+          "default": "",
+          "description": "ADMINER_PLUGINS='tables-filter tinymce'",
+          "label": "ADMINER_PLUGINS",
+          "name": "Plugins"
+        }
+      ],
+      "image": "adminer",
+      "logo": "https://raw.githubusercontent.com/HannesDi/my_portainer_templates/main/Images/own/adminer.png",
+      "name": "adminer",
+      "platform": "linux",
+      "ports": ["8080:8080/tcp"],
+      "restart_policy": "unless-stopped",
+      "title": "Adminer",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/Adminer",
+          "container": "/config"
+        }
+      ]
+    },
+    {
       "categories": ["Other", "Tools"],
       "description": "Flame is self-hosted startpage for your server. Easily manage your apps and bookmarks with built-in editors.",
       "env": [
